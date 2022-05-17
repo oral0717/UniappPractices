@@ -1,27 +1,26 @@
 <template>
 	<view class="content">
-        <image class="logo" src="../../static/logo.png"></image>
-		<view>
-            <text class="title">{{title}}</text>
-        </view>
+		<image class="logo" src="/static/logo.png"></image>
+		<view class="text-area">
+			<text class="title">{{title}}</text>
+		</view>
 	</view>
 </template>
 
-<script lang="ts">
-	import Vue from 'vue';
-	export default Vue.extend({
+<script>
+	export default {
 		data() {
 			return {
 				title: 'Hello'
 			}
 		},
-		onLoad(): void {
-			console.log(1112)
+		onLoad() {
+
 		},
 		methods: {
 
 		}
-	});
+	}
 </script>
 
 <style>
@@ -35,7 +34,10 @@
 	.logo {
 		height: 200rpx;
 		width: 200rpx;
-		margin: 200rpx auto 50rpx auto;
+		margin-top: 200rpx;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50rpx;
 	}
 
 	.text-area {
