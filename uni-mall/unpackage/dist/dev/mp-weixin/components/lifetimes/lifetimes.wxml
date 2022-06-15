@@ -1,0 +1,1 @@
+<view><block wx:if="{{flag}}"><slot></slot></block><button data-event-opts="{{[['tap',[['change',['$event']]]]]}}" bindtap="__e">点击update</button></view>

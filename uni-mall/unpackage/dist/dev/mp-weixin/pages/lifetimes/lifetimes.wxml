@@ -1,0 +1,1 @@
+<view>生命周期页面<lifetimes vue-id="b1c62bac-1" bind:__l="__l" vue-slots="{{['default']}}">生命周期组件</lifetimes></view>

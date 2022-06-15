@@ -1,52 +1,48 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
-	</view>
+  <view class="msg">
+    <text class="text1">{{ msg }}</text>
+    <button @click="change">点击我</button>
+    <input v-model="msg" />
+    <view v-if="flag">条件判断：{{ msg }}</view>
+    <view v-else>条件判断else</view>
+
+    <view v-for="itemx in arr" :key="itemx">{{ itemx }}</view>
+    <view v-for="(value, key) in obj" :key="key">{{ key }}--{{ value }}</view>
+  </view>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
-		}
-	}
+export default {
+  data() {
+    return {
+      msg: "Oral",
+      flag: false,
+      arr: [1, 2, 3],
+      obj: {
+        name: "a",
+        age: 23,
+      },
+    };
+  },
+  onLoad() {
+    setTimeout(() => {
+      this.msg = "oral2";
+    }, 3000);
+  },
+  methods: {
+    change() {
+      this.msg = "zhang";
+      this.flag = !this.flag;
+    },
+  },
+};
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+<style lang="scss">
+	.msg{
+		color: #f00;
+		.text1{
+			color: #00f;
+		}
 	}
 </style>

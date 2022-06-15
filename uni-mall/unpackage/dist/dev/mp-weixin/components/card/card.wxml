@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['handleClick',['$event']]]]]}}" style="{{'background:'+(color)+';'+('font-size:'+('26px')+';')}}" bindtap="__e">card<slot></slot></view>
